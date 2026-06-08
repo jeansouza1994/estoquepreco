@@ -19,7 +19,7 @@ public class EstoqueController {
 
     @PutMapping
     private ResponseEntity alteraEstoque(@RequestBody EstoqueDto estoqueDto) {
-        System.out.println(estoqueDto.codigoproduto);
+        System.out.println(estoqueDto.getCodigoproduto());
 
         this.rabbitmqService.enviaMensagem(RabbitmqConstantes.FILA_ESTOQUE, estoqueDto);
         return ResponseEntity.ok().build();

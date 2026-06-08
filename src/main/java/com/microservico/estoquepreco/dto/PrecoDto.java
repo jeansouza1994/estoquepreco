@@ -1,8 +1,26 @@
 package com.microservico.estoquepreco.dto;
 
-import java.io.Serializable;
+public class PrecoDto {
 
-public class PrecoDto implements Serializable {
-    public String codigoproduto;
-    public double preco;
+    private String codigoproduto;
+    private double preco;
+
+    public PrecoDto() {
+    }
+
+    public String getCodigoproduto() {
+        return codigoproduto;
+    }
+
+    public void setCodigoproduto(String codigoproduto) {
+        this.codigoproduto = codigoproduto;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
 }
